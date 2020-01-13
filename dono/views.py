@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 # Create your views here.
 from dono.forms import DonoForm
@@ -9,7 +9,14 @@ def cadastro(request):
     args = {
         'form':form
     }
+
+    return redirect('/', kwargs={'msg':'Cadastrado com sucesso'})
+
+    
     if form.is_valid():
         form.save()
         args['msg'] = 'Cadastro Realizado com sucesso'
-    return render(request, 'cadastro.html', args)
+
+    
+     
+    return render(request, 'cadastro.html', args) 
