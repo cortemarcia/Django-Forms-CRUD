@@ -4,6 +4,11 @@
 
 <div>
     <h1>Faça o seu Login aqui:</h1>
-    <form action="." method="post"></form>
-    <input type="submit" value="Login"> 
+    <form action="." method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Logar</button>
+    </form>
 </div>
+
+{% endblock body %}
