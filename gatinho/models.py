@@ -14,3 +14,6 @@ class Gatinho(models.Model):
     )
     cor = models.CharField(choices=cores, max_length=100)
     dono = models.ManyToManyField(Dono, blank=True)
+
+
+    
