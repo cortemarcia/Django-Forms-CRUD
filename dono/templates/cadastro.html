@@ -8,4 +8,10 @@
             <button type="submit" class="btn btn-primary">Cadastrar Dono</button>
         </form>
     </section>
+    <section class="container">
+        {% if msg %}
+        <h3>{{msg}}</h3>
+        <a href="/"><button class="btn btn-primary">ir para página gatinhos</button></a>
+        {% endif %}
+</section>
 {% endblock body%}
